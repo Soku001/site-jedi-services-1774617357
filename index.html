@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jedi Services | Premium Electricians in Glasgow</title>
+    <meta name="description" content="Jedi Services offers premium electrical installations, rewiring, fault finding, PAT testing, EV charger installation, and smart home solutions in Glasgow, UK. Your trusted local electricians.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* CSS Reset & Global Styles */
+        :root {
+            --primary-color: #1a1a2e; /* Dark Blue */
+            --accent-color: #4a90d9;  /* Bright Blue */
+            --background-color: #f8f9fa; /* Light Grey */
+            --text-color: #333;
+            --light-text-color: #f8f9fa;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Inter', sans-serif;
+            color: var(--primary-color);
+            line-height: 1.2;
+            margin-top: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--accent-color);
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--light-text-color);
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn:hover {
+            background-color: #3a7dc4; /* Slightly darker accent */
+            transform: translateY(-2px);
+            color: var(--light-text-color);
+        }
+
+        .section-heading {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 10px;
+            text-align: center; /* Default for sections */
+        }
+
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        /* Header & Navigation */
+        .header {
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--light-text-color);
+            display: flex;
+            align-items: center;
+        }
+        .logo i {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--light-text-color);
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .hamburger .bar {
+            width: 25px;
+            height: 3px;
+            background-color: var(--light-text-color);
+            margin: 4px 0;
+            transition: 0.4s;
+        }
+
+        /* Hamburger animation */
+        .hamburger.active .bar:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active .bar:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        .mobile-menu {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary-color);
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            z-index: 999;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .mobile-menu.open {
+            transform: translateX(0);
+            display: flex; /* Show when open */
+        }
+
+        .mobile-menu a {
+            color: var(--light-text-color);
+            font-size: 1.5em;
+            font-weight: 600;
+            padding: 10px 0;
+            width: 80%;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-menu .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2em;
+            color: var(--light-text-color);
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            z-index: 1000; /* Ensure close button is clickable */
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh; /* Adjust height for desired visual impact */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--light-text-color);
+            overflow: hidden;
+            padding: 40px 20px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.7)), url('https://source.unsplash.com/featured/1600x900/?Electrician,professional') no-repeat center center/cover;
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.8em;
+            margin-bottom: 20px;
+            color: var(--light-text-color);
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.4em;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background-color: var(--background-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 5px solid var(--accent-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card i {
+            font-size: 3.5em;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .service-card p {
+            font-size: 1em;
+            color: var(--text-color);
+            margin-bottom: 20px;
+            flex-grow: 1; /* Allows paragraph to take available space */
+        }
+
+        .service-card .learn-more {
+            font-weight: 600;
+            font-size: 0.95em;
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--accent-color);
+        }
+
+        .service-card .learn-more:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: #f0f2f5; /* Slightly different background for visual break */
+        }
+
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-text .section-heading { /* Specific targeting for about-text heading */
+            text-align: left;
+            margin-bottom: 20px; /* Adjust margin as it's not centered */
+        }
+        .about-text .section-heading::after {
+            left: 0;
+            transform: translateX(0);
+        }
+
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        /* Reviews Section */
+        .reviews {
+            padding: 80px 0;
+            background-color: var(--background-color);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .review-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--accent-color);
+            position: relative;
+        }
+        .review-card i.fas.fa-quote-left {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 3em;
+            color: rgba(74, 144, 217, 0.1); /* Very light accent */
+            z-index: 0;
+        }
+
+        .review-card p {
+            font-style: italic;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .review-card .reviewer-info {
+            font-weight: 600;
+            color: var(--primary-color);
+            position: relative;
+            z-index: 1;
+        }
+
+        .review-card .reviewer-info span {
+            display: block;
+            font-size: 0.9em;
+            font-weight: 400;
+            color: var(--text-color);
+        }
+
+        /* New Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+        }
+
+        .features .section-heading {
+            color: var(--light-text-color);
+            text-align: center;
+        }
+        .features .section-heading::after {
+            background-color: var(--accent-color);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-item {
+            background-color: rgba(255, 255, 255, 0.08);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        .feature-item:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .feature-item i {
+            font-size: 3em;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-item h3 {
+            font-size: 1.4em;
+            color: var(--light-text-color);
+            margin-bottom: 15px;
+        }
+
+        .feature-item p {
+            font-size: 1em;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background-color: var(--background-color);
+        }
+
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .contact-info, .contact-form {
+            flex: 1;
+            min-width: 300px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            border-top: 5px solid var(--accent-color);
+        }
+
+        .contact-info h3, .contact-form h3 {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin-bottom: 25px;
+        }
+
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .contact-info p i {
+            color: var(--accent-color);
+            margin-right: 15px;
+            font-size: 1.5em;
+            width: 30px; /* Align icons */
+            text-align: center;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form label {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 0.95em;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form input[type="tel"],
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form select:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 2px rgba(74, 144, 217, 0.2);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-form .btn {
+            align-self: flex-start;
+            margin-top: 15px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            padding: 60px 0 20px;
+            font-size: 0.95em;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            color: var(--accent-color);
+            font-size: 1.3em;
+            margin-bottom: 20px;
+        }
+
+        .footer-column .logo {
+             font-size: 1.8em;
+             margin-bottom: 20px;
+             display: inline-flex; /* To apply margin-bottom correctly */
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-column p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .footer-column p i {
+            margin-right: 10px;
+            color: var(--accent-color);
+            font-size: 1.1em;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366; /* WhatsApp Green */
+            color: var(--light-text-color);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 2em;
+            line-height: 60px;
+            box-shadow: var(--shadow);
+            z-index: 999;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) translateY(-5px);
+            background-color: #128c7e; /* Darker green */
+            color: var(--light-text-color); /* Ensure text color remains light */
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 3em;
+            }
+            .hero p {
+                font-size: 1.2em;
+            }
+            .section-heading {
+                font-size: 2em;
+            }
+            .nav-links {
+                gap: 20px;
+            }
+            .footer-grid {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0 20px;
+            }
+            .nav-links {
+                display: none; /* Hide desktop nav links */
+            }
+            .hamburger {
+                display: flex; /* Show hamburger menu */
+            }
+
+            .hero {
+                height: 70vh;
+            }
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            .hero p {
+                font-size: 1.1em;
+            }
+
+            .services-grid, .reviews-grid, .features-grid, .footer-grid {
+                grid-template-columns: 1fr; /* Stack columns */
+            }
+            .about-content, .contact-content {
+                flex-direction: column;
+            }
+            /* Center align heading for about-text on mobile */
+            .about-text .section-heading {
+                text-align: center;
+            }
+            .about-text .section-heading::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .about-image {
+                order: -1; /* Image above text on mobile for about section */
+            }
+            .contact-form .btn {
+                align-self: center;
+            }
+            .contact-info, .contact-form {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 10px 0;
+            }
+            .logo {
+                font-size: 1.5em;
+            }
+            .hero {
+                height: 60vh;
+                padding: 20px 15px;
+            }
+            .hero h1 {
+                font-size: 2em;
+            }
+            .hero p {
+                font-size: 1em;
+            }
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+            .section-heading {
+                font-size: 1.8em;
+                margin-bottom: 30px;
+            }
+            .container {
+                padding: 15px;
+            }
+            .service-card, .review-card, .feature-item, .contact-info, .contact-form {
+                padding: 25px;
+            }
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 1.8em;
+                line-height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="#hero" class="logo">
+                <i class="fas fa-bolt"></i> Jedi Services
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+        <div class="mobile-menu" id="mobile-menu">
+            <button class="close-btn" id="close-menu" aria-label="Close Mobile Menu">&times;</button>
+            <a href="#hero">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#features">Features</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1>Mastering Power, Ensuring Safety.</h1>
+                <p>Your trusted premium electricians in Glasgow, delivering exceptional service and innovative electrical solutions.</p>
+                <a href="#contact" class="btn">Book a Free Consultation</a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container text-center">
+                <h2 class="section-heading">Our Expert Electrical Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-plug"></i>
+                        <h3>Electrical Installations</h3>
+                        <p>Ensure safe, efficient, and up-to-code electrical systems for your property.</p>
+                        <a href="#contact" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Rewiring</h3>
+                        <p>Modernize your property's electrical infrastructure for enhanced safety and performance.</p>
+                        <a href="#contact" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-magnifying-glass"></i>
+                        <h3>Fault Finding</h3>
+                        <p>Swiftly diagnose and resolve complex electrical issues to restore power and safety.</p>
+                        <a href="#contact" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-clipboard-check"></i>
+                        <h3>PAT Testing</h3>
+                        <p>Guarantee the safety and compliance of your portable appliances with thorough inspections.</p>
+                        <a href="#contact" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-charging-station"></i>
+                        <h3>EV Charger Installation</h3>
+                        <p>Future-proof your home with convenient and reliable electric vehicle charging solutions.</p>
+                        <a href="#contact" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-house-user"></i>
+                        <h3>Smart Home</h3>
+                        <p>Transform your living space with intelligent, integrated systems for ultimate comfort and control.</p>
+                        <a href="#contact" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-heading">About Jedi Services</h2>
+                        <p>At Jedi Services, we are Glasgow's trusted electricians, dedicated to providing premium, reliable, and safe electrical solutions for both homes and businesses. With years of experience serving the Glasgow community, our certified and highly skilled team ensures every project, from intricate **rewiring** to advanced **EV Charger Installations**, is completed to the highest standards.</p>
+                        <p>We pride ourselves on transparent communication, exceptional workmanship, and a customer-first approach that guarantees peace of mind. Your safety and satisfaction are our top priorities, making us the preferred choice for all your electrical needs in Glasgow and beyond.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://source.unsplash.com/featured/900x600/?Electrician,team" alt="Jedi Services Electrician Team">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="reviews">
+            <div class="container text-center">
+                <h2 class="section-heading">What Our Clients Say</h2>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"Jedi Services carried out a complete **rewiring** of our tenement flat in Partick, Glasgow. Their team was professional, tidy, and incredibly efficient. The peace of mind knowing our electrics are now safe and modern is invaluable. Highly recommend!"</p>
+                        <div class="reviewer-info">- Sarah J.<span>Glasgow West End</span></div>
+                    </div>
+                    <div class="review-card">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"We had Jedi Services install an **EV Charger** at our home in Bearsden, and the process was seamless from start to finish. Expert advice, meticulous installation, and friendly service. Excellent local electricians!"</p>
+                        <div class="reviewer-info">- Mark T.<span>Bearsden</span></div>
+                    </div>
+                    <div class="review-card">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"Our office in Glasgow City Centre experienced a complex electrical issue. Jedi Services quickly provided **fault finding** expertise, identifying and fixing the problem without disruption to our business. Their response time and technical skill were impressive."</p>
+                        <div class="reviewer-info">- Glasgow Tech Solutions<span>City Centre</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Features Section -->
+        <section id="features" class="features">
+            <div class="container text-center">
+                <h2 class="section-heading">Experience the Future of Electrical Services</h2>
+                <p style="color: rgba(255, 255, 255, 0.8); font-size: 1.1em; margin-top: -20px; margin-bottom: 50px;">We're constantly innovating to make your experience with Jedi Services seamless and efficient.</p>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-comments"></i>
+                        <h3>Live Chat</h3>
+                        <p>Instant visitor support, available 24/7 to answer your queries.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-calendar-check"></i>
+                        <h3>Online Booking</h3>
+                        <p>Easily schedule appointments directly from our website without needing to call.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-robot"></i>
+                        <h3>AI Assistant</h3>
+                        <p>Get immediate answers to common questions with our intelligent AI support.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-headset"></i>
+                        <h3>AI Voice Agent</h3>
+                        <p>Every call is answered, ensuring you never miss an important conversation.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <h3>WhatsApp Integration</h3>
+                        <p>Instant replies and quick communication directly through WhatsApp.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fab fa-google"></i>
+                        <h3>Live Google Reviews</h3>
+                        <p>See our latest customer feedback, updated automatically on the site.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container text-center">
+                <h2 class="section-heading">Get in Touch with Jedi Services</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <p><i class="fas fa-phone-alt"></i> <a href="tel:+447923232414">+44 7923 232414</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:webmaster@jediservices.co.uk">webmaster@jediservices.co.uk</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> 31a Townsend St, Glasgow G4 0LA, United Kingdom</p>
+                        <p style="margin-top: 30px;">Reach out to us for a free consultation or any electrical enquiries. We're here to help!</p>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Send Us an Enquiry</h3>
+                        <form action="#" method="POST"> <!-- In a real scenario, this would point to a backend script -->
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                            
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required placeholder="john.doe@example.com">
+                            
+                            <label for="phone">Your Phone (Optional)</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+44 7XXX XXXXXX">
+                            
+                            <label for="service-interest">Service of Interest</label>
+                            <select id="service-interest" name="service_interest" required>
+                                <option value="">-- Please select a service --</option>
+                                <option value="Electrical Installations">Electrical Installations</option>
+                                <option value="Rewiring">Rewiring</option>
+                                <option value="Fault Finding">Fault Finding</option>
+                                <option value="PAT Testing">PAT Testing</option>
+                                <option value="EV Charger Installation">EV Charger Installation</option>
+                                <option value="Smart Home">Smart Home</option>
+                            </select>
+                            
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell us more about your electrical needs..."></textarea>
+                            
+                            <button type="submit" class="btn">Get in Touch</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-column">
+                <a href="#hero" class="logo">
+                    <i class="fas fa-bolt"></i> Jedi Services
+                </a>
+                <p>Premium electrical solutions for homes and businesses across Glasgow. Safety, efficiency, and customer satisfaction are our core values.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#reviews">Testimonials</a></li>
+                    <li><a href="#features">New Features</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="#services">Electrical Installations</a></li>
+                    <li><a href="#services">Rewiring</a></li>
+                    <li><a href="#services">Fault Finding</a></li>
+                    <li><a href="#services">PAT Testing</a></li>
+                    <li><a href="#services">EV Charger Installation</a></li>
+                    <li><a href="#services">Smart Home</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-phone-alt"></i> <a href="tel:+447923232414">+44 7923 232414</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:webmaster@jediservices.co.uk">webmaster@jediservices.co.uk</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> 31a Townsend St, Glasgow G4 0LA, United Kingdom</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Jedi Services. All rights reserved. Designed for excellence by Glasgow's trusted electricians.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/447923232414" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                const headerOffset = document.querySelector('.header').offsetHeight; // Get header height
+                
+                // Only scroll if the target element exists
+                if (targetElement) {
+                    const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+                    const offsetPosition = elementPosition - headerOffset - 20; // Subtract header height and a bit more for padding
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+
+
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobile-menu');
+                const hamburger = document.getElementById('hamburger-menu');
+                if (mobileMenu.classList.contains('open')) {
+                    mobileMenu.classList.remove('open');
+                    if (hamburger) hamburger.classList.remove('active'); // Reset hamburger icon
+                }
+            });
+        });
+
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeBtn = document.getElementById('close-menu');
+
+        if (hamburger && mobileMenu && closeBtn) {
+            hamburger.addEventListener('click', () => {
+                mobileMenu.classList.toggle('open');
+                hamburger.classList.toggle('active');
+            });
+
+            closeBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                hamburger.classList.remove('active');
+            });
+            
+            // Close mobile menu if clicked outside or resized
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768 && mobileMenu.classList.contains('open')) {
+                    mobileMenu.classList.remove('open');
+                    hamburger.classList.remove('active');
+                }
+            });
+            document.addEventListener('click', (event) => {
+                if (mobileMenu.classList.contains('open') && !mobileMenu.contains(event.target) && !hamburger.contains(event.target)) {
+                    mobileMenu.classList.remove('open');
+                    hamburger.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
